@@ -6,9 +6,9 @@ test("test to make new instance for employee", () =>{
 });
 
 test("test to set name from constructor argument", () => {
-    const testName = "Georgia";
-    const testEmp = new Employee(testName);
-    expect(testEmp.testName).toBe(testName);
+    const name = "Georgia";
+    const testEmp = new Employee(name);
+    expect(testEmp.name).toBe(name);
 });
 
 test("test to set id", () =>{
@@ -32,7 +32,7 @@ test("test to get name from getName()", () => {
 test("test to get id from getId()", () => {
     const testVal = 100;
     const testEmp = new Employee("Georgia", testVal);
-    expect(testEmp.getId()).toBe(testVal);
+    expect(testEmp.getID()).toBe(testVal);
 });
 
 test("test to get email from  getEmail()", () => {

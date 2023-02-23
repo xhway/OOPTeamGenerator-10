@@ -3,9 +3,9 @@ const fs = require('fs');
 
 //employees
 
-const Engineer = require('./engineer');
-const Intern = require('./intern');
-const Manager = require('./manager');
+const Engineer = require('./lib/engineer');
+const Intern = require('./lib/intern');
+const Manager = require('./lib/manager');
 
 const teamMembers = [];
 
@@ -103,10 +103,10 @@ function chosenEmployeeData(){
             if (answers.newEmployee === true){
                 chosenEmployeeData();
             } else{
-               var main = fs.readFileSync('./main1.html', 'utf-8');
+               var main = fs.readFileSync('./html_layouts01/main1.html', 'utf-8');
                main = main.replace(/{{teamName}}/g, teamName);
 
-               var managerCard = fs.readFileSync('./html_layouts/Manager2.html', 'utf-8');
+               var managerCard = fs.readFileSync('./html_layouts01/Manager2.html', 'utf-8');
 
                managerCard = manager.Card.replace('{{name}}', manager.getName());
                managerCard = manager.Card.replace('{{role}}', manager.getRole());
