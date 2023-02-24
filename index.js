@@ -103,16 +103,16 @@ function chosenEmployeeData(){
             if (answers.newEmployee === true){
                 chosenEmployeeData();
             } else{
-               var main = fs.readFileSync('./html_layouts01/main1.html', 'utf-8');
+               var main = fs.readFileSync('./html_layouts01/main1.html', 'utf8');
                main = main.replace(/{{teamName}}/g, teamName);
 
-               var managerCard = fs.readFileSync('./html_layouts01/Manager2.html', 'utf-8');
+               var managerCard = fs.readFileSync('./html_layouts01/Manager2.html', 'utf8');
 
-               managerCard = manager.Card.replace('{{name}}', manager.getName());
-               managerCard = manager.Card.replace('{{role}}', manager.getRole());
-               managerCard = manager.Card.replace('{{id}}', manager.getID());
-               managerCard = manager.Card.replace('{{email}}', manager.getEmail()); 
-               managerCard = manager.Card.replace('{{officeNumber}}', manager.getOfficeNumber()); 
+               managerCard = managerCard.replace('{{name}}', manager.getName());
+               managerCard = managerCard.replace('{{role}}', manager.getRole());
+               managerCard = managerCard.replace('{{id}}', manager.getID());
+               managerCard = managerCard.replace('{{email}}', manager.getEmail()); 
+               managerCard = managerCard.replace('{{officeNumber}}', manager.getOfficeNumber()); 
 
                //Appends team members after manager is selected
 
@@ -123,9 +123,9 @@ function chosenEmployeeData(){
                }
                main = main.replace('{{cards}}', cards);
 
-               fs.writeFileSync('./team.html', main);
+               fs.writeFileSync('./output/team.html', main);
 
-               console.log("The team html has been generated!");
+               console.log("The team html file has been generated!");
             }
         });
 }
@@ -134,7 +134,7 @@ function chosenEmployeeData(){
 
 function renderEmployee(employee){
     if (employee.getRole() === "Intern"){
-        var internCard = fs.readFileSync('/Intern.html', 'utf-8');
+        var internCard = fs.readFileSync('./html_layouts01/Intern.html', 'utf8');
         internCard = internCard.replace('{{name}}', employee.getName());
         internCard = internCard.replace('{{role}}', employee.getRole());
         internCard = internCard.replace('{{id}}', employee.getID());
@@ -142,12 +142,12 @@ function renderEmployee(employee){
         internCard = internCard.replace('{{school}}', employee.getSchool());
         return internCard;
     }else if (employee.getRole()=== "Engineer"){
-        var engineerCard = fs.readFileSync('./Engineer.html', 'utf-8');
+        var engineerCard = fs.readFileSync('./html_layouts01/Engineer.html', 'utf8');
         engineerCard = engineerCard.replace('{{name}}', employee.getName());
         engineerCard = engineerCard.replace('{{role}}', employee.getRole());
         engineerCard = engineerCard.replace('{{id}}', employee.getID());
         engineerCard = engineerCard.replace('{{email}}', employee.getEmail());
-        engineerCard = engineerCard.replace('{{github}}', employee.getGithub());
+        engineerCard = engineerCard.replace('{{github}}', employee.getGitHub());
         return engineerCard;
     }
 }

@@ -1,0 +1,12 @@
+body{
+    background-color: ghostwhite;
+    text-align: center;
+
+}
+
+#teamName{
+    background-color: red;
+    color:black;
+    font-size: 56px;
+    padding: 5%;
+}
