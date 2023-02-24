@@ -6,6 +6,9 @@
 <img width="609" alt="Screen Shot 2023-02-23 at 11 36 10 PM" src="https://user-images.githubusercontent.com/118576289/221092826-dbff0805-ab13-4f00-a94e-28a213629ae4.png">
 
 
+<img width="897" alt="Screen Shot 2023-02-23 at 11 43 03 PM" src="https://user-images.githubusercontent.com/118576289/221093673-bf0c3119-a00e-426e-8fe0-8af4201ec9ae.png">
+
+
 - Testing is key to making code maintainable, so a unit test was written for every part of the code and ensured that it passed each test. 
 - Your application should use Jest for running the unit tests and Inquirer for collecting input from the user. 
 
