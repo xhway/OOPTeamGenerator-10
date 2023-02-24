@@ -2,6 +2,10 @@
 
 - The task was to build a Node.js command-line application that takes in information about employees on a software engineering team, then generates an HTML webpage that displays summaries for each person.
 
+
+<img width="609" alt="Screen Shot 2023-02-23 at 11 36 10 PM" src="https://user-images.githubusercontent.com/118576289/221092826-dbff0805-ab13-4f00-a94e-28a213629ae4.png">
+
+
 - Testing is key to making code maintainable, so a unit test was written for every part of the code and ensured that it passed each test. 
 - Your application should use Jest for running the unit tests and Inquirer for collecting input from the user. 
 
